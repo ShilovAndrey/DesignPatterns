@@ -1,4 +1,4 @@
-package strategy;
+package pattern_strategy.strategy;
 
 public class KnifeBehavior implements WeaponBehavior {
 

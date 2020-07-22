@@ -1,4 +1,4 @@
-package strategy;
+package pattern_strategy.strategy;
 
 public abstract class Character {
     WeaponBehavior weapon;
