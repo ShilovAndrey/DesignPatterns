@@ -2,8 +2,6 @@ package pattern_decorater;
 
 public class Milk extends CondimentDecorator {
 
-    Beverage beverage;
-
     public Milk(Beverage beverage) {
         this.beverage = beverage;
     }
@@ -25,7 +23,6 @@ public class Milk extends CondimentDecorator {
 }
 
 class Chocolate extends CondimentDecorator {
-    Beverage beverage;
 
     public Chocolate(Beverage beverage) {
         this.beverage = beverage;
@@ -48,7 +45,6 @@ class Chocolate extends CondimentDecorator {
 }
 
 class Soy extends CondimentDecorator {
-    Beverage beverage;
 
     public Soy(Beverage beverage) {
         this.beverage = beverage;
@@ -71,7 +67,6 @@ class Soy extends CondimentDecorator {
 }
 
 class Whip extends CondimentDecorator {
-    Beverage beverage;
 
     public Whip(Beverage beverage) {
         this.beverage = beverage;
