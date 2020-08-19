@@ -1,4 +1,4 @@
-package pattern_command;
+package pattern_command.command;
 
 public class MasterCommand implements Command {
 
