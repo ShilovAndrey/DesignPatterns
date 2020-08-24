@@ -6,9 +6,12 @@ public class ChocolateBoiler {
     private boolean empty;
     private boolean boiled;
 
-    private ChocolateBoiler(){}
+    private ChocolateBoiler(){
+        empty=true;
+        boiled=false;
+    }
 
-    public synchronized ChocolateBoiler getInstance(){
+    public static synchronized ChocolateBoiler getInstance(){
         if(boiler==null){
             boiler=new ChocolateBoiler();
         }
@@ -17,23 +20,27 @@ public class ChocolateBoiler {
 
     public void fill(){
         if(isEmpty()){
+            System.out.println("емкость заполняется");
             empty=false;
             boiled=false;
-            // заполнение нагревателя молочно-шоколадной смесью
-        }
+        }else
+            System.out.println("нельзя заполнять, емкость уже заполнена");
     }
 
     public void drain(){
         if(!isEmpty()&&isBoiled()){
-            // слить нагретое молоко и шоколад
-        }
+            System.out.println("содержимое емкости сливается");
+            empty=true;
+        }else
+            System.out.println("нельзя сливать содержимое емкости");
     }
 
     public void boil(){
         if(!isEmpty()&&!isBoiled()){
-            // довесьт содержимое до кипения
+            System.out.println("содержимое емкости доводится до кипения");
             boiled=true;
-        }
+        }else
+            System.out.println("нельзя нагревать емкость");
     }
 
     public boolean isEmpty(){
